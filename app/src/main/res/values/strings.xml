@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyFamily</string>
+    <string name="jan">Jan</string>
+
 </resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="1dp"
+        android:background="@color/cardview_shadow_end_color"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            android:orientation="horizontal"
+
+            >
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                >
+                <ImageView
+                    android:id="@+id/btn_delete"
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+
+                    android:layout_gravity="end"
+                    android:scaleType="centerCrop"
+
+                    />
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_display_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/allerta_stencil"
+                        android:text="Display name"
+                        android:textColor="@color/list_item_descprion_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_pick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_display_name"
+                        android:text="Pick"
+                        android:fontFamily="@font/anonymous_pro_italic"
+                        android:textSize="20sp"
+                        android:textColor="@color/list_item_descprion_color" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
