@@ -10,6 +10,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.widget.TextView;
 
 
 import com.google.android.material.tabs.TabLayout;
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFrag(new NovFragment(), "NOV");
         adapter.addFrag(new DecFragment(), "DEC");
         viewPager.setAdapter(adapter);
+
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -95,4 +99,56 @@ public class MainActivity extends AppCompatActivity {
             return mFragmentTitleList.get(position);
         }
     }
+
+    private void setupTabIcons() {
+
+        TextView tabJan = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabJan.setText("Jan");
+        tabLayout.getTabAt(0).setCustomView(tabJan);
+
+        TextView tabFeb = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabFeb.setText("Feb");
+        tabLayout.getTabAt(1).setCustomView(tabFeb);
+
+        TextView tabMar = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabMar.setText("Mar");
+        tabLayout.getTabAt(2).setCustomView(tabMar);
+
+        TextView tabApr = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabApr.setText("Apr");
+        tabLayout.getTabAt(3).setCustomView(tabApr);
+
+        TextView tabmay = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabmay.setText("May");
+        tabLayout.getTabAt(4).setCustomView(tabmay);
+
+        TextView tabjune = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabjune.setText("June");
+        tabLayout.getTabAt(5).setCustomView(tabjune);
+
+        TextView tabjuly = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabjuly.setText("Jul");
+        tabLayout.getTabAt(6).setCustomView(tabjuly);
+
+        TextView tabaug = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabaug.setText("Aug");
+        tabLayout.getTabAt(7).setCustomView(tabaug);
+
+        TextView tabSep = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabSep.setText("Sep");
+        tabLayout.getTabAt(8).setCustomView(tabSep);
+
+        TextView tabOct = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabOct.setText("Oct");
+        tabLayout.getTabAt(9).setCustomView(tabOct);
+
+        TextView tabnov = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabnov.setText("Nov");
+        tabLayout.getTabAt(10).setCustomView(tabnov);
+
+        TextView tabDec = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabDec.setText("Dec");
+        tabLayout.getTabAt(11).setCustomView(tabDec);
+    }
+
 }
