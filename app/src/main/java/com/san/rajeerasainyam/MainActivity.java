@@ -29,6 +29,7 @@ import com.san.rajeerasainyam.months.OctFragment;
 import com.san.rajeerasainyam.months.SepFragment;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -149,6 +150,13 @@ public class MainActivity extends AppCompatActivity {
         TextView tabDec = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabDec.setText("Dec");
         tabLayout.getTabAt(11).setCustomView(tabDec);
+
+        setCurrentMonthTab();
+    }
+
+    private void setCurrentMonthTab() {
+        int month=Calendar.getInstance().get(Calendar.MONTH);
+        viewPager.setCurrentItem(month);
     }
 
 }

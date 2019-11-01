@@ -63,7 +63,7 @@ public class JanFragment extends Fragment {
         sandeepbday.date="14th Apr";
         sandeepbday.name="Sandeep Birth Day";
         sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.sandeep;
+        sandeepbday.resourceId=R.drawable.saandy;
 
         events.add(sandeepbday);
         events.add(sandeepbday);
