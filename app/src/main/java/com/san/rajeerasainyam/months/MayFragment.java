@@ -59,11 +59,19 @@ public class MayFragment extends Fragment {
         events.add(sri);
 
         Event jai=new Event();
-        jai.date="9th May";
-        jai.name="Srihas Birth Day";
+        jai.date="10th May";
+        jai.name="Jai Dev Birth Day";
         jai.eventType= EventTypes.EVENT_BDAY;
         jai.resourceId=R.drawable.jai;
         events.add(jai);
+
+        Event hema=new Event();
+        hema.date="23rd May";
+        hema.name="Hema Birth Day";
+        hema.eventType= EventTypes.EVENT_BDAY;
+        hema.resourceId=R.drawable.hema;
+        events.add(hema);
+
         return events;
     }
 }

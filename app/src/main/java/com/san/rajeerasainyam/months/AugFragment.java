@@ -51,19 +51,25 @@ public class AugFragment extends Fragment {
     public ArrayList<Event> getThisMonthEvents()
     {
         ArrayList<Event> events=new ArrayList<Event>();
-        Event sandeepbday=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Sandeep Birth Day";
-        sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
 
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
+        Event pooja=new Event();
+        pooja.date="8th Aug";
+        pooja.name="Pooja Birth Day";
+        pooja.eventType= EventTypes.EVENT_BDAY;
+        pooja.resourceId=R.drawable.swapna;
+
+
+        events.add(pooja);
+        Event Swapna=new Event();
+        Swapna.date="11th Aug";
+        Swapna.name="Swapna Birth Day";
+        Swapna.eventType= EventTypes.EVENT_BDAY;
+        Swapna.resourceId=R.drawable.swapna;
+
+
+        events.add(Swapna);
+
+
 
 
         return events;

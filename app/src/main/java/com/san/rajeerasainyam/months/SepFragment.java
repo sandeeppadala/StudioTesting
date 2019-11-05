@@ -51,19 +51,13 @@ public class SepFragment extends Fragment {
     public ArrayList<Event> getThisMonthEvents()
     {
         ArrayList<Event> events=new ArrayList<Event>();
-        Event sandeepbday=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Sandeep Birth Day";
-        sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
+        Event upendar=new Event();
+        upendar.date="14th sep";
+        upendar.name="Upendar Birth Day";
+        upendar.eventType= EventTypes.EVENT_BDAY;
+        upendar.resourceId=R.drawable.saandy;
 
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
+        events.add(upendar);
 
 
         return events;

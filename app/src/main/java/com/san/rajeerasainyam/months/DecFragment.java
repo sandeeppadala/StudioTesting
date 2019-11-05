@@ -60,6 +60,13 @@ public class DecFragment extends Fragment {
         dhamuBday.resourceId=R.drawable.dhamu;
         events.add(dhamuBday);
 
+        Event chintu=new Event();
+        chintu.date="6th Dec";
+        chintu.name="Chintu Birth Day";
+        chintu.eventType= EventTypes.EVENT_BDAY;
+        chintu.resourceId=R.drawable.chintu;
+        events.add(chintu);
+
         Event anuBday=new Event();
         anuBday.date="12th Dec";
         anuBday.name="Anusha Birth Day";
@@ -87,10 +94,6 @@ public class DecFragment extends Fragment {
         rishi.eventType= EventTypes.EVENT_BDAY;
         rishi.resourceId=R.drawable.rishi;
         events.add(rishi);
-
-
-
-
 
         return events;
     }

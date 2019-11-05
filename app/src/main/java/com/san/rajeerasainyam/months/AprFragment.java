@@ -60,10 +60,10 @@ public class AprFragment extends Fragment {
 events.add(sandeepbday);
 
         Event harsha=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Harsha sri Birth Day";
-        sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
+        harsha.date="14th Apr";
+        harsha.name="Harsha sri Birth Day";
+        harsha.eventType= EventTypes.EVENT_BDAY;
+        harsha.resourceId=R.drawable.saandy;
         events.add(harsha);
 
 

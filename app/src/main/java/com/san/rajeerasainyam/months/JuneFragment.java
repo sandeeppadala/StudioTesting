@@ -52,19 +52,13 @@ public class JuneFragment extends Fragment {
     public ArrayList<Event> getThisMonthEvents()
     {
         ArrayList<Event> events=new ArrayList<Event>();
-        Event sandeepbday=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Sandeep Birth Day";
-        sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
+        Event chinnu=new Event();
+        chinnu.date="10th June";
+        chinnu.name="Chinnu Birth Day";
+        chinnu.eventType= EventTypes.EVENT_BDAY;
+        chinnu.resourceId=R.drawable.saandy;
 
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
+        events.add(chinnu);
 
 
         return events;
