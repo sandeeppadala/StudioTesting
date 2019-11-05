@@ -60,20 +60,11 @@ public class JanFragment extends Fragment {
     {
         ArrayList<Event> events=new ArrayList<Event>();
         Event sandeepbday=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Sandeep Birth Day";
+        sandeepbday.date="15th Jan";
+        sandeepbday.name="Umakar Birth Day";
         sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
-
+        sandeepbday.resourceId=R.drawable.umakar;
         events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-
-
         return events;
     }
 

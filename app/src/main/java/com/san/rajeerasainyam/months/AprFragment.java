@@ -5,16 +5,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.san.rajeerasainyam.R;
+import com.san.rajeerasainyam.adapters.EventsListAdapter;
+import com.san.rajeerasainyam.bean.Event;
+import com.san.rajeerasainyam.bean.EventTypes;
+
+import java.util.ArrayList;
 
 
 public class AprFragment extends Fragment {
 
-    public AprFragment() {
-        // Required empty public constructor
-    }
+    RecyclerView recyclerView;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,43 @@ public class AprFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_jan, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initViewsAndSetData();
+    }
+
+    private void initViewsAndSetData() {
+        recyclerView=getView().findViewById(R.id.rides_list);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        EventsListAdapter listAdapater = new EventsListAdapter(getActivity(), getThisMonthEvents());
+        recyclerView.setAdapter(listAdapater);
+    }
+
+    public ArrayList<Event> getThisMonthEvents()
+    {
+        ArrayList<Event> events=new ArrayList<Event>();
+        Event sandeepbday=new Event();
+        sandeepbday.date="14th Apr";
+        sandeepbday.name="Sandeep Birth Day";
+        sandeepbday.eventType= EventTypes.EVENT_BDAY;
+        sandeepbday.resourceId=R.drawable.saandy;
+events.add(sandeepbday);
+
+        Event harsha=new Event();
+        sandeepbday.date="14th Apr";
+        sandeepbday.name="Harsha sri Birth Day";
+        sandeepbday.eventType= EventTypes.EVENT_BDAY;
+        sandeepbday.resourceId=R.drawable.saandy;
+        events.add(harsha);
+
+
+
+
+        return events;
     }
 
 }
