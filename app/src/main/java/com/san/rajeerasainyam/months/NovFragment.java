@@ -79,7 +79,7 @@ public class NovFragment extends Fragment {
         srinu.date="21st Nov";
         srinu.name="Srinivas Birth Day";
         srinu.eventType= EventTypes.EVENT_BDAY;
-        srinu.resourceId=R.drawable.saandy;
+        srinu.resourceId=R.drawable.sreenunew;
         events.add(srinu);
 
         Event sunny=new Event();
