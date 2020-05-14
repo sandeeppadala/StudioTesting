@@ -38,30 +38,8 @@ public class JuneFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initViewsAndSetData();
+
     }
 
-    private void initViewsAndSetData() {
-        recyclerView=getView().findViewById(R.id.rides_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        EventsListAdapter listAdapater = new EventsListAdapter(getActivity(), getThisMonthEvents());
-        recyclerView.setAdapter(listAdapater);
-    }
-
-    public ArrayList<Event> getThisMonthEvents()
-    {
-        ArrayList<Event> events=new ArrayList<Event>();
-        Event chinnu=new Event();
-        chinnu.date="10th June";
-        chinnu.name="Chinnu Birth Day";
-        chinnu.eventType= EventTypes.EVENT_BDAY;
-        chinnu.resourceId=R.drawable.saandy;
-
-        events.add(chinnu);
-
-
-        return events;
-    }
 
 }

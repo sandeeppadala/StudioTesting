@@ -38,41 +38,7 @@ public class JulyFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initViewsAndSetData();
+
     }
 
-    private void initViewsAndSetData() {
-        recyclerView=getView().findViewById(R.id.rides_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        EventsListAdapter listAdapater = new EventsListAdapter(getActivity(), getThisMonthEvents());
-        recyclerView.setAdapter(listAdapater);
-    }
-
-    public ArrayList<Event> getThisMonthEvents()
-    {
-        ArrayList<Event> events=new ArrayList<Event>();
-        Event vicky=new Event();
-        vicky.date="21st july";
-        vicky.name="Vicky Birth day";
-        vicky.eventType= EventTypes.EVENT_BDAY;
-        vicky.resourceId=R.drawable.vicky;
-        events.add(vicky);
-
-        Event srithi=new Event();
-        srithi.date="21st july";
-        srithi.name="Srithi Birth day";
-        srithi.eventType= EventTypes.EVENT_BDAY;
-        srithi.resourceId=R.drawable.srithinew;
-        events.add(srithi);
-
-        Event indu=new Event();
-        indu.date="29th july";
-        indu.name="Indu Birth day";
-        indu.eventType= EventTypes.EVENT_BDAY;
-        indu.resourceId=R.drawable.indu;
-        events.add(indu);
-
-        return events;
-    }
 }

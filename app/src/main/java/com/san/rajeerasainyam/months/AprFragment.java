@@ -38,38 +38,7 @@ public class AprFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initViewsAndSetData();
+
     }
-
-    private void initViewsAndSetData() {
-        recyclerView=getView().findViewById(R.id.rides_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        EventsListAdapter listAdapater = new EventsListAdapter(getActivity(), getThisMonthEvents());
-        recyclerView.setAdapter(listAdapater);
-    }
-
-    public ArrayList<Event> getThisMonthEvents()
-    {
-        ArrayList<Event> events=new ArrayList<Event>();
-        Event sandeepbday=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Sandeep Birth Day";
-        sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
-events.add(sandeepbday);
-
-        Event harsha=new Event();
-        harsha.date="14th Apr";
-        harsha.name="Harsha sri Birth Day";
-        harsha.eventType= EventTypes.EVENT_BDAY;
-        harsha.resourceId=R.drawable.saandy;
-        events.add(harsha);
-
-
-
-
-        return events;
-    }
-
 }
+

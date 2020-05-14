@@ -37,36 +37,8 @@ public class OctFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initViewsAndSetData();
+
     }
 
-    private void initViewsAndSetData() {
-        recyclerView=getView().findViewById(R.id.rides_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        EventsListAdapter listAdapater = new EventsListAdapter(getActivity(), getThisMonthEvents());
-        recyclerView.setAdapter(listAdapater);
-    }
-
-    public ArrayList<Event> getThisMonthEvents()
-    {
-        ArrayList<Event> events=new ArrayList<Event>();
-        Event sandeepbday=new Event();
-        sandeepbday.date="14th Apr";
-        sandeepbday.name="Sandeep Birth Day";
-        sandeepbday.eventType= EventTypes.EVENT_BDAY;
-        sandeepbday.resourceId=R.drawable.saandy;
-
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-        events.add(sandeepbday);
-
-
-        return events;
-    }
 
 }
